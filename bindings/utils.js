@@ -6,6 +6,8 @@ export function addTextToBody(text) {
 }
 export var foo = 'bar';
 export var baz = 'ponyfoo';
+export var tutu = 'tutu!!!';
+setTimeout(() => tutu = 'chazam?', 500)
 
 /*
 In CommonJS you don’t even have to assign an object to module.exports
@@ -28,5 +30,8 @@ works.
 export var foo = 'bar'
 export var baz = 'ponyfoo'
 
-It’s important to keep in mind that we are exporting bindings.
+An important point to make is that ES6 modules export bindings, not
+values or references. That means that a foo variable you export
+would be bound into the foo variable on the module, and its value
+would be subject to changes made to foo.
 */
