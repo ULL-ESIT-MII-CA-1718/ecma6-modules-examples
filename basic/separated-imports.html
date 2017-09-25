@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <script type="module">
+    import {addTextToBody} from './utils.js';
+    import {color} from "./module1.js";
+    import {name} from "./module1.js";
+    import {multiply} from "./module1.js";
+
+    addTextToBody('color = '+color);
+    addTextToBody('name = '+name);
+    addTextToBody('3*4 = '+multiply(3,4));
+  </script>
+</body>
+</html>

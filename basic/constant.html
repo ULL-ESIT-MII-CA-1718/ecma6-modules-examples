@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <script type="module">
+    import {addTextToBody as print} from './utils.js';
+    import { name, setName } from "./module2.js";
+
+    print(name);       // "Nicholas"
+    setName("Greg");
+    print(name);       // "Greg"
+
+    // name = "Nicholas";       // error: TypeError: Attempted to assign to readonly property.
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <script type="module">
+    import {addTextToBody} from './utils.js';
+    import * as t from "./module1.js";
+
+    addTextToBody('color = '+t.color);
+    /*
+        t.color = 'green';  // TypeError: Attempted to assign to readonly property.
+    */
+    addTextToBody('name = '+t.name);
+    addTextToBody('3*4 = '+t.multiply(3,4));
+
+    let r = new  t.Rectangle(2,3);
+    addTextToBody('r.length = '+r.length);
+    addTextToBody('magicNumber = '+t.magicNumber);
+  </script>
+</body>
+</html>
