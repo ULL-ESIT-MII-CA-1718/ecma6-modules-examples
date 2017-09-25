@@ -6,10 +6,23 @@
 </head>
 <body>
   <script type="module">
+    /* 
+      This import statement imports the default from the module. 
+      Note that no curly braces are used, unlike you’d
+      see in a non-default import. 
+      The local name sum is used to represent whatever default function the module exports. 
+      This syntax is the cleanest, and the creators of ECMAScript 6 expect
+      it to be the dominant form of import on the Web, allowing you
+      to use an already-existing object.
+    */
     import {addTextToBody} from './utils.js';
     import sum  from "./module3.js";
+    import add from "./module4.js";
+    import plus from "./module5.js";
 
     addTextToBody('sum(2,3) = '+sum(2,3));
+    addTextToBody('add(2,3) = '+add(2,3));
+    addTextToBody('plus(2,3) = '+plus(2,3));
   </script>
 </body>
 </html>
